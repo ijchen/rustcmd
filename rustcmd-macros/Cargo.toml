@@ -1,0 +1,22 @@
+[package]
+name = "rustcmd-macros"
+version = "0.1.0"
+edition = "2021"
+authors = ["Isaac Chen"]
+description = "Quick, easy, and robust command-line scripting, from Rust!"
+license = "MIT OR Apache-2.0"
+readme = "README.md"
+repository = "https://github.com/ijchen/rustcmd"
+documentation = "https://docs.rs/rustcmd"
+include = ["/src/", "/Cargo.toml", "/README.md", "/LICENSE-*"]
+publish = false
+
+[dependencies]
+rand = "0.8.5"
+rustcmd-macros = { version = "0.1.0", path = "../rustcmd-macros", optional = true }
+
+[dev-dependencies]
+
+[features]
+default = ["macros"]
+macros = ["dep:rustcmd-macros"]
